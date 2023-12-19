@@ -27,18 +27,5 @@ export class Attack extends Skill {
 			const stun = new Stun(character);
 			stun.Start(2.5);
 		});*/
-		print("[srv]: attack start");
-	}
-
-	protected OnEndServer(): void {
-		print("[srv]: attack end");
-	}
-
-	protected OnStartClient(StarterParams: void): void {
-		print("[clt]: attack start");
-	}
-
-	protected OnEndClient(): void {
-		print("[clt]: attack end");
 	}
 }
