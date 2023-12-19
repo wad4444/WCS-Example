@@ -22,5 +22,9 @@
     "prettier": "^3.1.1",
     "roblox-ts": "^2.2.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@rbxts/services": "^1.5.1",
+    "@rbxts/wcs": "file:wcs.tgz"
   }
 }
