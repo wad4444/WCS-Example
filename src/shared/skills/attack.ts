@@ -5,7 +5,7 @@ import { Stun } from "shared/statusEffects/stun";
 export class Attack extends Skill {
 	protected MutualExclusives = [Stun];
 	protected OnStartServer() {
-		/*const characterModel = this.Character.Instance as Model;
+		const characterModel = this.Character.Instance as Model;
 		const position = characterModel.GetPivot().Position;
 
 		const parts = Workspace.GetPartBoundsInRadius(position, 20);
@@ -26,6 +26,6 @@ export class Attack extends Skill {
 			// create a stun effect on the character and apply it for 2.5 seconds
 			const stun = new Stun(character);
 			stun.Start(2.5);
-		});*/
+		});
 	}
 }
