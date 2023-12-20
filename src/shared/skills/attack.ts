@@ -21,6 +21,8 @@ export class Attack extends Skill {
 			character && !nearbyCharacters.includes(character) && nearbyCharacters.push(character);
 		});
 
+		this.ApplyCooldown(5);
+
 		if (nearbyCharacters.size() === 0) return;
 		nearbyCharacters.forEach((character) => {
 			// create a stun effect on the character and apply it for 2.5 seconds
