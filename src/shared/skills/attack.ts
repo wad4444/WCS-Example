@@ -1,8 +1,9 @@
 import { Workspace } from "@rbxts/services";
 import { Character, Skill, SkillDecorator, StatusEffect } from "@rbxts/wcs";
 import { Stun } from "shared/statusEffects/stun";
+
 @SkillDecorator
-export class Attack extends Skill {
+export class Attack extends Skill<void, void, void> {
 	protected MutualExclusives = [Stun];
 	protected OnStartServer() {
 		const characterModel = this.Character.Instance as Model;
