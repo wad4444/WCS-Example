@@ -1,9 +1,10 @@
+/* eslint-disable roblox-ts/lua-truthiness */
 import { Workspace } from "@rbxts/services";
 import { Character, Skill, SkillDecorator, StatusEffect } from "@rbxts/wcs";
 import { Stun } from "shared/statusEffects/stun";
 
 @SkillDecorator
-export class Attack extends Skill<void, void, void> {
+export class Attack extends Skill<void, [], void, void, void> {
 	protected MutualExclusives = [Stun];
 	protected OnStartServer() {
 		const characterModel = this.Character.Instance as Model;
@@ -27,7 +28,7 @@ export class Attack extends Skill<void, void, void> {
 		if (nearbyCharacters.size() === 0) return;
 		nearbyCharacters.forEach((character) => {
 			// create a stun effect on the character and apply it for 2.5 seconds
-			const stun = new Stun(character);
+			const stun = new Stun(character, 5);
 			stun.Start(2.5);
 		});
 	}
