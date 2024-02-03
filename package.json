@@ -25,6 +25,6 @@
   },
   "dependencies": {
     "@rbxts/services": "^1.5.1",
-    "@rbxts/wcs": "^0.5.4"
+    "@rbxts/wcs": "^0.6.3"
   }
 }
