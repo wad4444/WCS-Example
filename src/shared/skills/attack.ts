@@ -19,7 +19,7 @@ export class Attack extends Skill {
 			const humanoid = model?.FindFirstChildOfClass("Humanoid");
 			if (!humanoid || !model || model === characterModel) return;
 
-			const character = Character.GetCharacterFromInstance_TS(model);
+			const character = Character.GetCharacterFromInstance(model);
 			character && !nearbyCharacters.includes(character) && nearbyCharacters.push(character);
 		});
 
